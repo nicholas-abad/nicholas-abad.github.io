@@ -11808,7 +11808,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -11839,7 +11839,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">base_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.indeed.com/jobs?q=data+scientist&amp;l=San+Francisco&amp;sort=date&quot;</span>
@@ -11863,7 +11863,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">main</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span> <span class="p">:</span> <span class="s1">&#39;resultsCol&#39;</span><span class="p">})</span>
@@ -11886,7 +11886,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getSinglePage</span><span class="p">(</span><span class="n">main</span> <span class="o">=</span> <span class="n">main</span><span class="p">):</span>
@@ -11967,13 +11967,31 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">getSinglePage</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">getSinglePage</span><span class="p">())</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{&#39;company&#39;: &#39;East Bay Community Law Center&#39;, &#39;title&#39;: &#39;Data Scientist&#39;, &#39;location&#39;: &#39;Berkeley, CA&#39;, &#39;age&#39;: &#39;Just posted&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=8641267ff125f6e0&amp;fccid=7cf96aeb3fb76db8&amp;vjs=3&#39;}, {&#39;company&#39;: &#39;Adobe&#39;, &#39;title&#39;: &#39;Data Scientist, Machine Learning Evaluation&#39;, &#39;location&#39;: &#39;San Francisco, CA&#39;, &#39;age&#39;: &#39;Today&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=a316d4b4ede96420&amp;fccid=f89deb5a97c7738a&amp;vjs=3&#39;}, {&#39;company&#39;: &#39;Genentech&#39;, &#39;title&#39;: &#39;PHC Data Scientist - Analytics&#39;, &#39;location&#39;: &#39;South San Francisco, CA&#39;, &#39;age&#39;: &#39;Today&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=178af76275edc695&amp;fccid=2525cc4a9a704809&amp;vjs=3&#39;}]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -11982,26 +12000,46 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To actually display and exemplify a page that contains what we are looking for, I'll output the 4th page by changing the base URL. From there, I need to re-initialize our request, the HTML parser, and the main block of text. Note that this is only done to exemplify the above code. We will be re-initializing everything back to its original code immediately afterwards.</p>
+<p>Here is an output of the job listings in a clear way:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Change base URL to the 4th page in order to show results.</span>
-<span class="n">base_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.indeed.com/jobs?q=data+scientist&amp;l=San+Francisco&amp;sort=date&amp;fromage=last&amp;start=40&quot;</span>
-<span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">base_url</span><span class="p">)</span>
-<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
-<span class="n">main</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span> <span class="p">:</span> <span class="s1">&#39;resultsCol&#39;</span><span class="p">})</span>
-
-<span class="n">getSinglePage</span><span class="p">(</span><span class="n">main</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">singlePage</span> <span class="o">=</span> <span class="n">getSinglePage</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">singlePage</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;company&#39;: &#39;East Bay Community Law Center&#39;, &#39;title&#39;: &#39;Data Scientist&#39;, &#39;location&#39;: &#39;Berkeley, CA&#39;, &#39;age&#39;: &#39;Just posted&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=8641267ff125f6e0&amp;fccid=7cf96aeb3fb76db8&amp;vjs=3&#39;}
+
+{&#39;company&#39;: &#39;Adobe&#39;, &#39;title&#39;: &#39;Data Scientist, Machine Learning Evaluation&#39;, &#39;location&#39;: &#39;San Francisco, CA&#39;, &#39;age&#39;: &#39;Today&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=a316d4b4ede96420&amp;fccid=f89deb5a97c7738a&amp;vjs=3&#39;}
+
+{&#39;company&#39;: &#39;Genentech&#39;, &#39;title&#39;: &#39;PHC Data Scientist - Analytics&#39;, &#39;location&#39;: &#39;South San Francisco, CA&#39;, &#39;age&#39;: &#39;Today&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=178af76275edc695&amp;fccid=2525cc4a9a704809&amp;vjs=3&#39;}
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12017,7 +12055,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Change the base URL back to the original position</span>
@@ -12043,7 +12081,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getMultiplePages</span><span class="p">(</span><span class="n">numPages</span> <span class="o">=</span> <span class="mi">10</span><span class="p">):</span>
@@ -12077,13 +12115,57 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">getMultiplePages</span><span class="p">(</span><span class="n">numPages</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">multiplePages</span> <span class="o">=</span> <span class="n">getMultiplePages</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">multiplePages</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;company&#39;: &#39;East Bay Community Law Center&#39;, &#39;title&#39;: &#39;Data Scientist&#39;, &#39;location&#39;: &#39;Berkeley, CA&#39;, &#39;age&#39;: &#39;Just posted&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=8641267ff125f6e0&amp;fccid=7cf96aeb3fb76db8&amp;vjs=3&#39;}
+
+{&#39;company&#39;: &#39;Adobe&#39;, &#39;title&#39;: &#39;Data Scientist, Machine Learning Evaluation&#39;, &#39;location&#39;: &#39;San Francisco, CA&#39;, &#39;age&#39;: &#39;Today&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=a316d4b4ede96420&amp;fccid=f89deb5a97c7738a&amp;vjs=3&#39;}
+
+{&#39;company&#39;: &#39;Genentech&#39;, &#39;title&#39;: &#39;PHC Data Scientist - Analytics&#39;, &#39;location&#39;: &#39;South San Francisco, CA&#39;, &#39;age&#39;: &#39;Today&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=178af76275edc695&amp;fccid=2525cc4a9a704809&amp;vjs=3&#39;}
+
+{&#39;company&#39;: &#39;iRhythm&#39;, &#39;title&#39;: &#39;Data Scientist/Machine Learning Engineer&#39;, &#39;location&#39;: &#39;San Francisco, CA&#39;, &#39;age&#39;: &#39;Today&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=ff83150382c1a1a3&amp;fccid=8bcd8bdbc4884073&amp;vjs=3&#39;}
+
+{&#39;company&#39;: &#39;DoorDash&#39;, &#39;title&#39;: &#39;Associate Data Scientist, Product Analytics&#39;, &#39;location&#39;: &#39;San Francisco, CA&#39;, &#39;age&#39;: &#39;Today&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=ff96623ca393693d&amp;fccid=efd005a3cb57805b&amp;vjs=3&#39;}
+
+{&#39;company&#39;: &#39;N-ovation Technology Group&#39;, &#39;title&#39;: &#39;Data Scientist&#39;, &#39;location&#39;: &#39;San Francisco, CA&#39;, &#39;age&#39;: &#39;Today&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=48f6228dc7e9e73a&amp;fccid=3ccce94d05470224&amp;vjs=3&#39;}
+
+{&#39;company&#39;: &#39;Plenty&#39;, &#39;title&#39;: &#39;Data Scientist&#39;, &#39;location&#39;: &#39;South San Francisco, CA&#39;, &#39;age&#39;: &#39;1 day ago&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=1d69ee62b0883e67&amp;fccid=d987874f70227b11&amp;vjs=3&#39;}
+
+{&#39;company&#39;: &#39;Electronic Arts&#39;, &#39;title&#39;: &#39;Data Scientist&#39;, &#39;location&#39;: &#39;Redwood City, CA 94065&#39;, &#39;age&#39;: &#39;1 day ago&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=fce4f36870fb463b&amp;fccid=617d7f961cfcf54a&amp;vjs=3&#39;}
+
+{&#39;company&#39;: &#39;Lending Club&#39;, &#39;title&#39;: &#39;Security Data Science Architect&#39;, &#39;location&#39;: &#39;San Francisco, CA 94105 (Financial District area)&#39;, &#39;age&#39;: &#39;1 day ago&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=dc36ef9003114990&amp;fccid=f0087c9c775936fe&amp;vjs=3&#39;}
+
+{&#39;company&#39;: &#39;Matchpoint Solutions&#39;, &#39;title&#39;: &#39;Data Scientist&#39;, &#39;location&#39;: &#39;San Francisco, CA&#39;, &#39;age&#39;: &#39;1 day ago&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=bda85573f7bf1508&amp;fccid=e6f73e5f13e68249&amp;vjs=3&#39;}
+
+{&#39;company&#39;: &#39;Yelp&#39;, &#39;title&#39;: &#39;Data Scientist&#39;, &#39;location&#39;: &#39;San Francisco, CA 94105 (Financial District area)&#39;, &#39;age&#39;: &#39;3 days ago&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=353a1b90be2f7738&amp;fccid=0e94073a1c937bd1&amp;vjs=3&#39;}
+
+{&#39;company&#39;: &#39;Electronic Arts&#39;, &#39;title&#39;: &#39;Research Data Scientist&#39;, &#39;location&#39;: &#39;Redwood City, CA 94065&#39;, &#39;age&#39;: &#39;3 days ago&#39;, &#39;url&#39;: &#39;https://www.indeed.com/rc/clk?jk=b6cc4e352a182b68&amp;fccid=617d7f961cfcf54a&amp;vjs=3&#39;}
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12099,7 +12181,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">createJSON</span><span class="p">(</span><span class="n">job_list</span><span class="p">,</span> <span class="n">output_name</span><span class="p">):</span>
@@ -12123,7 +12205,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">createCSV</span><span class="p">(</span><span class="n">json_file</span><span class="p">,</span> <span class="n">output_file</span><span class="p">):</span>

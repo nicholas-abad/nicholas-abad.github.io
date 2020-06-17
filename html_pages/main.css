@@ -46,9 +46,9 @@ body {
   h1 {
     margin: 0 0 16px 0;
     padding: 0 0 16px 0;
-    font-size: 42px;
+    font-size: 20px;
     font-weight: bold;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     border-bottom: 1px solid #999;
   }
   h1a {
@@ -73,6 +73,10 @@ body {
     font-size: 16px;
     color: #999;
     font-weight: normal;
+  }
+  H3 {
+    float: right;
+    margin: 170px -200 0 0;
   }
   p {
     margin: 0 0 16px 0;

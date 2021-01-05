@@ -372,6 +372,12 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about {
+  width: 85%;
+  padding-right: 2%;
+  padding-left: 13%;
+}
+
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -400,6 +406,12 @@ section {
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
+.facts {
+  width: 85%;
+  padding-right: 2%;
+  padding-left: 13%;
+}
+
 .facts .count-box {
   padding: 30px 30px 25px 30px;
   margin-top: 30px;
@@ -438,6 +450,12 @@ section {
 /*--------------------------------------------------------------
 # Akills
 --------------------------------------------------------------*/
+.skills {
+  width: 85%;
+  padding-right: 2%;
+  padding-left: 13%;
+}
+
 .skills .progress {
   height: 50px;
   display: block;
@@ -473,6 +491,12 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+.resume {
+  width: 85%;
+  padding-right: 2%;
+  padding-left: 13%;
+}
+
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
@@ -534,6 +558,12 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.portfolio {
+  width: 85%;
+  padding-right: 2%;
+  padding-left: 13%;
+}
+
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
@@ -690,6 +720,12 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services {
+  width: 85%;
+  padding-right: 2%;
+  padding-left: 13%;
+}
+
 .services .icon-box {
   text-align: center;
   padding: 70px 20px 80px 20px;
@@ -823,6 +859,12 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
+.testimonials {
+  width: 85%;
+  padding-right: 2%;
+  padding-left: 13%;
+}
+
 .testimonials .section-header {
   margin-bottom: 40px;
 }
@@ -901,6 +943,12 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact {
+  width: 85%;
+  padding-right: 2%;
+  padding-left: 13%;
+}
+
 .contact .info {
   width: 100%;
   background: #fff;

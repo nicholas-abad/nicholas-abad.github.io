@@ -15,7 +15,7 @@
 
   <title>Nicholas Abad — Data Scientist / AI Engineer</title>
   <meta content="Data Scientist / AI Engineer in Berlin with 6+ years building production ML systems. Currently focused on LLM/RAG retrieval and evaluation at Fuchs und Eule." name="description">
-  <meta content="Nicholas Abad, Data Scientist, AI Engineer, LLM, RAG, retrieval, evaluation, production ML, Berlin, Fuchs und Eule, DKFZ, bioinformatics" name="keywords">
+  <meta content="Nicholas Abad, Data Scientist, AI Engineer, LLM, RAG, retrieval, evaluation, production ML, Berlin, Fuchs und Eule, Heidelberg University, DKFZ, bioinformatics" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/personal_logo.png" rel="icon">
@@ -38,6 +38,93 @@
   <!-- Local overrides: tighter vertical rhythm between sections -->
   <style>
     section { padding-top: 40px; padding-bottom: 40px; }
+
+    /* About → labeled metadata card */
+    .info-card h3 { margin-bottom: 0.4rem; }
+    .info-card .info-tagline {
+      font-style: italic;
+      color: #6c757d;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1.45;
+      max-width: 42em;
+    }
+    .info-card .info-divider {
+      margin: 0 0 0.5rem 0;
+      border: 0;
+      border-top: 1px solid #ececec;
+    }
+    .info-card .info-row {
+      display: flex;
+      align-items: baseline;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid #f2f2f2;
+    }
+    .info-card .info-row:last-child { border-bottom: 0; }
+    .info-card .info-label {
+      flex: 0 0 105px;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8a8a8a;
+      font-weight: 600;
+    }
+    .info-card .info-value {
+      flex: 1;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #333;
+    }
+    .info-card .info-value .info-sub {
+      color: #888;
+      font-size: 0.85rem;
+    }
+    .about-photo {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .about-photo-caption {
+      margin-top: 0.5rem;
+      font-size: 0.82rem;
+      font-style: italic;
+      color: #8a8a8a;
+      text-align: center;
+      line-height: 1.4;
+    }
+    /* About → floated bio photo (magazine wrap) */
+    .about-photo-float {
+      float: right;
+      width: 320px;
+      max-width: 45%;
+      margin: 0.2rem 0 1.25rem 1.75rem;
+    }
+    .about-photo-float img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      display: block;
+    }
+    .about-photo-float figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.82rem;
+      font-style: italic;
+      color: #8a8a8a;
+      text-align: center;
+      line-height: 1.4;
+    }
+    @media (max-width: 767.98px) {
+      .about-photo-float {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 1rem 0;
+      }
+    }
+    @media (max-width: 575.98px) {
+      .info-card .info-row { flex-direction: column; }
+      .info-card .info-label { flex: none; margin-bottom: 0.2rem; }
+    }
   </style>
 
   <!-- =======================================================
@@ -93,46 +180,85 @@
 
         <div class="section-title">
           <h2>About Me</h2>
-            <p style="text-align: left">
-              I'm <b>Nicholas Abad</b>, a <b>Data Scientist / AI Engineer</b> based in Berlin with <b>6+ years building production ML systems</b>, currently focused on LLM/RAG retrieval and evaluation in regulated technical domains.
-              <br><br>
-              At <b>Fuchs und Eule</b>, a Berlin greentech focused on residential energy efficiency and renovation, I'm the sole data scientist across three production AI products — two built from scratch and one taken from early MVP to production.
-              I own the retrieval and evaluation stack for an LLM-first search product over 350k+ German/English technical documents (energy regulations, DIN standards, BAFA/KfW funding rules) used daily by 40+ consultants and analysts.
-              I built a document-AI pipeline that classifies invoice line items against complex external funding rules with auditable, structured outputs, and scaled a geospatial ML pipeline that turns public 3D building data into physics-based DIN 18599 simulations, taking energy-analyst effort from 3–8 hours down to seconds.
-              Without a dedicated PM on the ML side, I also drive roadmap and acceptance criteria across the three workstreams, and recently presented the technical roadmap to investors during a funding round.
-              <br><br>
-              Before Fuchs und Eule, I completed my <b>PhD in Applied Bioinformatics at the German Cancer Research Center (DKFZ)</b> in Heidelberg, where I built clinical decision support tooling for molecular tumor boards and a Python ETL pipeline that filtered and scored 80M+ candidate mutations for in-vitro validation.
-              My thesis, <i>"REMIND-Cancer: A Recurrence-Agnostic Workflow for Identifying and Prioritizing Functional Promoter Single Nucleotide Variants"</i>, is available <a href="https://archiv.ub.uni-heidelberg.de/volltextserver/35494/1/PhD_Thesis_FINAL_15Aug2024.pdf" target="_blank">here</a>.
-              Alongside the PhD, I taught 100+ non-technical professionals across 13 data science bootcamps at <b>CodeOp</b>, geared toward women and people from the LGBTQ+ community who remain underrepresented in tech.
-              <br><br>
-              Originally from Silicon Valley. I earned my Bachelor's in Mathematics at the University of San Francisco, my Master's in Data Science at Lancaster University in the UK, and then moved to Cologne to work as a Machine Learning Engineer first at a start-up and then at a consultancy before heading to Heidelberg and Berlin.
-              <br><br>
-            </p>
+        </div>
+
+        <div style="text-align: left">
+          <p>
+            I'm <b>Nicholas Abad</b>, a <b>Data Scientist / AI Engineer</b> based in Berlin with <b>6+ years building production ML systems</b>, currently focused on LLM/RAG retrieval and evaluation in regulated technical domains.
+          </p>
+
+          <figure class="about-photo-float">
+            <img src="assets/img/nick-fne.webp" alt="Nick at the Fuchs und Eule office in Berlin">
+            <figcaption>At Fuchs und Eule, Berlin.</figcaption>
+          </figure>
+
+          <p>
+            At <b>Fuchs und Eule</b>, a Berlin greentech focused on residential energy efficiency and renovation, I'm the sole data scientist across three production AI products — two built from scratch and one taken from early MVP to production.
+            I own the retrieval and evaluation stack for an LLM-first search product over 350k+ German/English technical documents (energy regulations, DIN standards, BAFA/KfW funding rules) used daily by 40+ consultants and analysts.
+            I built a document-AI pipeline that classifies invoice line items against complex external funding rules with auditable, structured outputs, and scaled a geospatial ML pipeline that turns public 3D building data into physics-based DIN 18599 simulations, taking energy-analyst effort from 3–8 hours down to seconds.
+            Without a dedicated PM on the ML side, I also drive roadmap and acceptance criteria across the three workstreams, and recently presented the technical roadmap to investors during a funding round.
+          </p>
+
+          <p>
+            Before Fuchs und Eule, I completed my <b>PhD in Applied Bioinformatics from Heidelberg University</b>, with research conducted at the German Cancer Research Center (DKFZ) in Heidelberg, where I built clinical decision support tooling for molecular tumor boards and a Python ETL pipeline that filtered and scored 80M+ candidate mutations for in-vitro validation.
+            My thesis, <i>"REMIND-Cancer: A Recurrence-Agnostic Workflow for Identifying and Prioritizing Functional Promoter Single Nucleotide Variants"</i>, is available <a href="https://archiv.ub.uni-heidelberg.de/volltextserver/35494/1/PhD_Thesis_FINAL_15Aug2024.pdf" target="_blank">here</a>.
+            Alongside the PhD, I taught 100+ non-technical professionals across 13 data science bootcamps at <b>CodeOp</b>, geared toward women and people from the LGBTQ+ community who remain underrepresented in tech.
+          </p>
+
+          <p>
+            Originally from Silicon Valley. I earned my Bachelor's in Mathematics at the University of San Francisco, my Master's in Data Science at Lancaster University in the UK, and then moved to Cologne to work as a Machine Learning Engineer first at a start-up and then at a consultancy before heading to Heidelberg and Berlin.
+          </p>
         </div>
 
         <div class="row">
           <div class="col-lg-4">
-            <img src="assets/img/profile-img.jpeg" class="img-fluid" alt="" style="width: 75%; height: auto;">
+            <img src="assets/img/mochi-coding.jpeg" class="about-photo" alt="Mochi the cat resting a paw on a laptop keyboard with code visible on screen">
+            <p class="about-photo-caption">Pair programming with my youngest cat, Mochi.</p>
           </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content">
+          <div class="col-lg-8 pt-4 pt-lg-0 content info-card">
             <h3>Data Scientist / AI Engineer</h3>
-            <p style="font-style: italic;">Production LLM/RAG retrieval and evaluation in regulated technical domains. PhD-trained, end-to-end ownership.</p>
-            <div class="row">
-              <div class="col-lg-6" style="font-size: 85%">
-                <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Focus:</strong> LLM/RAG retrieval &amp; evaluation</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Stack:</strong> Python, FastAPI, MLflow, LangChain, BGE/Chroma</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Currently:</strong> Sole DS / AI Engineer at Fuchs und Eule (Berlin)</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>From:</strong> Silicon Valley &rarr; Berlin</li>
-                </ul>
+            <p class="info-tagline">Production LLM/RAG retrieval and evaluation in regulated technical domains.</p>
+            <hr class="info-divider">
+
+            <div class="info-row">
+              <div class="info-label">Current</div>
+              <div class="info-value">
+                <strong>Fuchs und Eule</strong>, Berlin<br>
+                <span class="info-sub">Sole DS / AI Engineer</span>
               </div>
-              <div class="col-lg-6" style="font-size: 85%">
-                <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Education:</strong> PhD Applied Bioinformatics, DKFZ (2024); MSc Data Science, Lancaster; BSc Mathematics, USF</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Languages:</strong> English (native), German (learning)</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Open to:</strong> new senior IC roles</li>
-                </ul>
+            </div>
+
+            <div class="info-row">
+              <div class="info-label">Previously</div>
+              <div class="info-value">
+                Data Science Instructor, <span class="info-sub">CodeOp</span><br>
+                Data Science / ML Consultant, <span class="info-sub">Alexander Thamm</span><br>
+                Computer Vision Data Scientist, <span class="info-sub">fedger.io</span>
               </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-label">Education</div>
+              <div class="info-value">
+                <strong>PhD Applied Bioinformatics</strong>, Heidelberg University (2024)<br>
+                <span class="info-sub">Research conducted at the German Cancer Research Center (DKFZ)</span><br>
+                <span class="info-sub">MSc Data Science, Lancaster University · BSc Mathematics, University of San Francisco</span>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-label">Focus</div>
+              <div class="info-value">LLM/RAG retrieval &amp; evaluation in regulated technical domains</div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-label">Location</div>
+              <div class="info-value">Berlin · originally Silicon Valley</div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-label">Open to</div>
+              <div class="info-value">Senior Data Science / AI Engineer roles</div>
             </div>
           </div>
         </div>
@@ -253,10 +379,10 @@
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
               <h4>PhD in Applied Bioinformatics</h4>
-              <h4 style="color:black">German Cancer Research Center (DKFZ)<br>Heidelberg, Germany</h4>
+              <h4 style="color:black">Heidelberg University<br>Heidelberg, Germany</h4>
               <h5>Dec 2020 - Oct 2024</h5>
-              <h5>Division of Applied Bioinformatics at the DKFZ</h5>
-              <h5>Faculty of Engineering at Heidelberg University</h5>
+              <h5>Faculty of Engineering, Heidelberg University</h5>
+              <h5>Research conducted at the Division of Applied Bioinformatics, German Cancer Research Center (DKFZ)</h5>
               <p>
                 <ul>
                   <i class="icofont-rounded-right"></i>Built an interactive Flask/Dash clinical decision support dashboard for mutation analysis, used by clinicians and oncologists in weekly molecular tumor boards to support data-driven treatment decisions.<br>
@@ -796,7 +922,7 @@
   <footer id="footer">
     <div class="container">
       <h3>Nicholas Abad</h3>
-      <p>Data Scientist / AI Engineer at Fuchs und Eule, Berlin.<br>PhD in Applied Bioinformatics, DKFZ, Heidelberg.</p>
+      <p>Data Scientist / AI Engineer at Fuchs und Eule, Berlin.<br>PhD in Applied Bioinformatics, Heidelberg University (DKFZ).</p>
     </div>
   </footer><!-- End Footer -->
 
